@@ -6,7 +6,7 @@ import {
   COUNTRY
 } from "../constants";
 
-export const initialState = {
+const initialState = {
   [CITY]: [],
   [COUNTRY]: [],
   details: {
@@ -15,30 +15,38 @@ export const initialState = {
   }
 };
 
-export const reducer = (state, { type, payload }) => {
+const reducer = (state, { type, payload }) => {
   switch (type) {
-    case TOGGLE_FILTER:
+    case TOGGLE_FILTER: {
+      const { locality, name } = payload;
+
       return {
         ...state,
-        [payload.locality]: state[payload.locality].includes(payload.name)
-          ? state[payload.locality].filter(f => f !== payload.name)
-          : [...state[payload.locality], payload.name]
+        [locality]: state[locality].includes(name)
+          ? state[locality].filter(f => f !== name)
+          : [...state[locality], name]
       };
+    }
+    case CLEAR_FILTER: {
+      const { locality } = payload;
 
-    case CLEAR_FILTER:
       return {
         ...state,
-        [payload.locality]: []
+        [locality]: []
       };
+    }
 
-    case SHOW_MORE:
+    case SHOW_MORE: {
+      const { url, description } = payload;
+
       return {
         ...state,
         details: {
-          url: payload.url,
-          description: payload.description
+          url,
+          description
         }
       };
+    }
 
     default:
       return { ...state };

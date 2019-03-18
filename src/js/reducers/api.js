@@ -1,17 +1,17 @@
 import { FETCH_BUILDINGS, FETCH_USER, FULFILLED } from "../constants";
 
-export const initialState = {
+const initialState = {
   buildings: [],
   user: null
 };
 
-export const reducer = (state, action) => {
-  switch (action.type) {
+const reducer = (state, { type, payload }) => {
+  switch (type) {
     case `${FETCH_BUILDINGS}_${FULFILLED}`:
-      return { ...state, buildings: action.payload };
+      return { ...state, buildings: payload };
 
     case `${FETCH_USER}_${FULFILLED}`:
-      return { ...state, user: action.payload };
+      return { ...state, user: payload };
 
     default:
       return { ...state };
