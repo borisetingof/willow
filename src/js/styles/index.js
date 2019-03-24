@@ -11,13 +11,73 @@ import {
   BLACK
 } from "../constants";
 
+export const Label = styled.label`
+  color: #2c3e50;
+  text-transform: uppercase;
+  font-size: ${rem(12)};
+  padding: ${rem(10)};
+  flex: 1 1 50%;
+  box-sizing: border-box;
+`;
+
+export const Fieldset = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 100%;
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  padding: ${rem(10)};
+  font-size: ${rem(16)};
+  margin-top: ${rem(2)};
+  border: ${rem(1)} solid #c3c4c3;
+  border-radius: ${rem(4)};
+  box-sizing: border-box;
+`;
+
+export const Legend = styled.legend`
+  flex: 1 1 100%;
+  margin: ${rem(30)} ${rem(10)} ${rem(20)};
+  font-size: ${rem(10)};
+  color: #b0b8bc;
+  text-transform: uppercase;
+  border-bottom: ${rem(1)} solid #dbe0e2;
+`;
+
+export const Button = styled.button`
+  flex: 1 1;
+  font-size: ${rem(20)};
+  box-sizing: border-box;
+  border: 0;
+  color: #fff;
+  border-radius: ${rem(4)};
+  padding: ${rem(10)};
+  background: #627b8b;
+  border-bottom: ${rem(2)} solid #3f515d;
+  cursor: pointer;
+  margin: ${rem(10)};
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+`
+
+
+
 export const GlobalStyle = createGlobalStyle`
   html, body, .root {
   font-size: ${DEFAULT_FONT_SIZE}px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     text-rendering: optimizeLegibility;
     height: 100%;
     position: relative;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 `;
 
