@@ -29,30 +29,31 @@ const Header = styled.header`
 `;
 
 const Dl = styled.dl`
-  position: relative;
+  width: 100%;
+
 `;
 
 const Dt = styled.dt`
+  width: 0;
   color: #34495e;
   font-size: ${rem(10)};
   text-transform: uppercase;
-  position: absolute;
-  left: 0;
   border-bottom: 1px solid #dbe0e2;
-  width: ${rem(70)};
   min-height: ${rem(27)};
   padding-top: ${rem(11)};
-  box-sizing: border-box;
+  display: inline-block;
 `;
 
 const Dd = styled.dd`
   margin: 0;
   font-size: ${rem(16)};
   border-bottom: ${rem(1)} solid #dbe0e2;
-  width: 100%;
   line-height: ${rem(26)};
   margin-bottom: ${rem(10)};
   padding-left: ${rem(70)};
+  display: inline-block;
+  width: 100%;
+
 `;
 
 export default props => {
@@ -66,10 +67,10 @@ export default props => {
       </Header> */}
       <Dl>
         <Dt>Email</Dt>
-        <Dd>boris.etingof@gmail.com</Dd>
-        {/* <Dt>Phone</Dt>
+        <Dd>boris.etingof@reckon.com</Dd>
+        <Dt>Phone</Dt>
         <Dd>-</Dd>
-        <Dt>Address</Dt>
+        {/* <Dt>Address</Dt>
         <Dd>-</Dd>
         <Dt />
         <Dd>-</Dd>
