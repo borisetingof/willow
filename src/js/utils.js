@@ -1,3 +1,3 @@
-import { DEFAULT_FONT_SIZE } from "./constants";
+import { fontSize } from "./theme";
 
-export const rem = px => `${px / DEFAULT_FONT_SIZE}rem`;
+export const rem = px => `${px / fontSize}rem`;
