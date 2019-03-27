@@ -21,7 +21,7 @@ export const label = css`
   font-size: ${rem(12)};
 
   > input {
-    margin-top: ${rem(2)};
+    margin-top: ${rem(5)};
   }
 `;
 
@@ -37,6 +37,7 @@ export const input = css`
 export const legend = css`
   display: block;
   font-size: ${rem(10)};
+  line-height: ${rem(16)};
   color: ${props => props.theme.color3};
   text-transform: uppercase;
   border-bottom: ${rem(1)} solid ${props => props.theme.color4};
@@ -51,4 +52,9 @@ export const button = css`
   background: ${props => props.theme.color5};
   border-bottom: ${rem(2)} solid ${props => props.theme.color6};
   cursor: pointer;
+`;
+
+export const h1 = css`
+  color: ${props => props.theme.color1};
+  font-weight: 800;
 `;

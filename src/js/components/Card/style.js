@@ -1,38 +1,12 @@
-import React from "react";
 import styled from "styled-components";
 
-import { rem } from "../utils";
-import avatar from "../../images/avatar.png";
+import { rem } from "../../utils";
 
+export const Card = styled.div`
+  background: ${props => props.theme.color7};
+`;
 
-export default props => {
-  // const { user } = useUser();
-
-  return (
-    <>
-      <Header>
-        <h2>test</h2>
-        <img src={avatar} alt="avatar" />
-      </Header>
-      <Dl>
-        <Dt>Email</Dt>
-        <Dd>boris.etingof@reckon.com</Dd>
-        <Dt>Phone</Dt>
-        <Dd>-</Dd>
-        <Dt>Address</Dt>
-        <Dd>-</Dd>
-        <Dt />
-        <Dd>-</Dd>
-        <Dt>Postcode</Dt>
-        <Dd>-</Dd>
-        <Dt>Country</Dt>
-        <Dd>-</Dd>
-      </Dl>
-    </>
-  );
-};
-
-const Header = styled.header`
+export const Header = styled.header`
   color: ${props => props.theme.color7};
   background: ${props => props.theme.color1};
   display: flex;
@@ -55,12 +29,12 @@ const Header = styled.header`
   }
 `;
 
-const Dl = styled.dl`
+export const Dl = styled.dl`
   display: grid;
   grid-template-columns: 70px auto 70px auto;
 `;
 
-const Dt = styled.dt`
+export const Dt = styled.dt`
   grid-column-start: 1;
   grid-column-end: 2;
   color: ${props => props.theme.color9};
@@ -77,7 +51,7 @@ const Dt = styled.dt`
   }
 `;
 
-const Dd = styled.dd`
+export const Dd = styled.dd`
   grid-column-start: 2;
   grid-column-end: 5;
   font-size: ${rem(16)};

@@ -1,50 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 
-import { label, input, legend, button } from "../styles";
-import { rem } from "../utils";
+import { Form, Fieldset, Legend, Label, Input, Button, H1 } from "./style";
 
-const Form = styled.form`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-`;
-
-const Fieldset = styled.div`
-  grid-column-start: 1;
-  grid-column-end: 3;
-
-  @media (min-width: 576px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-`;
-
-const Legend = styled.legend`
-  ${legend};
-  grid-column-start: 1;
-  grid-column-end: 3;
-  margin: ${rem(10)};
-`;
-
-const Label = styled.label`
-  ${label};
-  margin: ${rem(10)};
-`;
-
-const Input = styled.input`
-  ${input};
-`;
-
-const Button = styled.button`
-  ${button};
-  margin: ${rem(10)};
-`;
-
-export default props => {
+export default ({ className }) => {
   // const { user } = useUser();
 
   return (
-    <>
+    <div className={className}>
+      <H1>hCard Builder</H1>
       <Form>
         <Fieldset>
           <Legend>Personal Details</Legend>
@@ -95,6 +58,6 @@ export default props => {
         <Button>Upload Avartar</Button>
         <Button>Create Hcard</Button>
       </Form>
-    </>
+    </div>
   );
 };
